@@ -2,7 +2,7 @@
  * Author: Corinna Buerger
  * Date: 04/03/2020
  * Repo: CorinnaBuerger/yt_no_recommendations
- * Contributor: Daniel Schuette
+ * Contributors: Daniel Schuette
  */
 const MODE = "debugging";
 
@@ -25,4 +25,8 @@ function hideElements(mode) {
     }
 }
 
-window.onload(() => hideElements(MODE));
+console.log("loading yt_no_recommendations scripts...");
+window.onload = function() {
+	hideElements(MODE);
+	console.log("all distractions hidden");
+};
