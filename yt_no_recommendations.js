@@ -8,17 +8,20 @@ const MODE = "debugging";
 function hideElements(mode) {
     const startPageSuggestions = document.getElementById("contents");
     const videoPlayerSuggestions = document.querySelector("#secondary");
-    
+
     const elementsToHide = [startPageSuggestions, videoPlayerSuggestions];
-    
+
     if (mode === "debugging") {
         console.log(elementsToHide);
     }
-    
+
     const numElementsToHide = elementsToHide.length;
     for (let i = 0; i < numElementsToHide; i++) {
-        elementsToHide[i].style.display = "none";
+        const element = elementsToHide[i];
+        if (element !== null) {
+            element.style.display = "none";
+        }
     }
 }
 
-hideElements(MODE);
+window.onload(() => hideElements(MODE));
