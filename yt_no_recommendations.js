@@ -2,6 +2,7 @@
  * Author: Corinna Buerger
  * Date: 04/03/2020
  * Repo: CorinnaBuerger/yt_no_recommendations
+ * Contributor: Daniel Schuette
  */
 const MODE = "debugging";
 
